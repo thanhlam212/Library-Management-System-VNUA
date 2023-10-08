@@ -10,28 +10,19 @@ using System.Windows.Forms;
 
 namespace Library_Management_System_VNUA
 {
-    public partial class LoginForm : Form
+    public partial class StudentsForm : Form
     {
-        public LoginForm()
+        public StudentsForm()
         {
             InitializeComponent();
         }
 
-
-
-        //Login Button Hover 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void QuitBtn_Click(object sender, EventArgs e)
         {
-            button1.BackColor = Color.DeepSkyBlue;
+            Application.Exit();
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.DarkTurquoise;
-        }
-
-        //Login Button Click
-        private void button1_Click(object sender, EventArgs e)
+        private void BackHomeBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainForm main = new MainForm();
