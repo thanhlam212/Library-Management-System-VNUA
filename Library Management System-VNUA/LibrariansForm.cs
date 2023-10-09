@@ -35,7 +35,7 @@ namespace Library_Management_System_VNUA
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("InsertDataLibrarians",conn);
-                cmd.CommandText = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@LibID", LibID.Text.Trim());
                 cmd.Parameters.AddWithValue("@LibName", LibName.Text.Trim());
                 cmd.Parameters.AddWithValue("@LibPassword", LibPass.Text.Trim());
