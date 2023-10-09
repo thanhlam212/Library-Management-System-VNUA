@@ -52,17 +52,29 @@
     <Compile Include="BookTbl.Designer.cs">
       <DependentUpon>BookTbl.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBookForm.Designer.cs">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrariansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrariansForm.Designer.cs">
+      <DependentUpon>LibrariansForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LodingForm.cs">
+    <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LodingForm.Designer.cs">
-      <DependentUpon>LodingForm.cs</DependentUpon>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -81,11 +93,17 @@
     <EmbeddedResource Include="BookTbl.resx">
       <DependentUpon>BookTbl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IssueBookForm.resx">
+      <DependentUpon>IssueBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrariansForm.resx">
+      <DependentUpon>LibrariansForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LodingForm.resx">
-      <DependentUpon>LodingForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

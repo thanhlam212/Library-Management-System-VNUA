@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.QuitBtn = new System.Windows.Forms.Button();
             this.StudentsName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Usn = new System.Windows.Forms.Label();
@@ -45,9 +45,9 @@
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.StudentsDataTable = new System.Windows.Forms.DataGridView();
-            this.QuitBtn = new System.Windows.Forms.Button();
             this.BackHomeBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDataTable)).BeginInit();
             this.SuspendLayout();
@@ -55,25 +55,27 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.QuitBtn);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1058, 53);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // QuitBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label1.Location = new System.Drawing.Point(278, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(531, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "E-Library Management System Students";
+            this.QuitBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("QuitBtn.BackgroundImage")));
+            this.QuitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.QuitBtn.FlatAppearance.BorderSize = 0;
+            this.QuitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.QuitBtn.Location = new System.Drawing.Point(999, 9);
+            this.QuitBtn.Name = "QuitBtn";
+            this.QuitBtn.Size = new System.Drawing.Size(47, 33);
+            this.QuitBtn.TabIndex = 2;
+            this.QuitBtn.UseVisualStyleBackColor = true;
+            this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // StudentsName
             // 
@@ -232,20 +234,6 @@
             this.StudentsDataTable.Size = new System.Drawing.Size(563, 338);
             this.StudentsDataTable.TabIndex = 17;
             // 
-            // QuitBtn
-            // 
-            this.QuitBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("QuitBtn.BackgroundImage")));
-            this.QuitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.QuitBtn.FlatAppearance.BorderSize = 0;
-            this.QuitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.QuitBtn.Location = new System.Drawing.Point(999, 9);
-            this.QuitBtn.Name = "QuitBtn";
-            this.QuitBtn.Size = new System.Drawing.Size(47, 33);
-            this.QuitBtn.TabIndex = 2;
-            this.QuitBtn.UseVisualStyleBackColor = true;
-            this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
-            // 
             // BackHomeBtn
             // 
             this.BackHomeBtn.BackColor = System.Drawing.Color.Transparent;
@@ -272,11 +260,23 @@
             this.panel2.Size = new System.Drawing.Size(1058, 15);
             this.panel2.TabIndex = 19;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label2.Location = new System.Drawing.Point(259, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(531, 33);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "E-Library Management System Students";
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(127)))), ((int)(((byte)(134)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1058, 527);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.BackHomeBtn);
@@ -295,7 +295,7 @@
             this.Controls.Add(this.StudentsName);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentsForm";
             this.Text = "StudentsForm";
@@ -310,7 +310,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label StudentsName;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Usn;
@@ -328,5 +327,6 @@
         private System.Windows.Forms.Button QuitBtn;
         private System.Windows.Forms.Button BackHomeBtn;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
     }
 }
