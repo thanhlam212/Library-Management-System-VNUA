@@ -52,6 +52,11 @@
     <Compile Include="BookTbl.Designer.cs">
       <DependentUpon>BookTbl.cs</DependentUpon>
     </Compile>
+    <Compile Include="eLibraryDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eLibraryDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IssueBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +125,17 @@
     <EmbeddedResource Include="StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="eLibraryDBDataSet.xsc">
+      <DependentUpon>eLibraryDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eLibraryDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eLibraryDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eLibraryDBDataSet.xss">
+      <DependentUpon>eLibraryDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
