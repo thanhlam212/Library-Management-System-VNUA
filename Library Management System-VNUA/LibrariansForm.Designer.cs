@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrariansForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.QuitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@
             this.QuitBtn.Size = new System.Drawing.Size(47, 33);
             this.QuitBtn.TabIndex = 2;
             this.QuitBtn.UseVisualStyleBackColor = true;
+            this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // label1
             // 
@@ -96,8 +98,14 @@
             // 
             // StudentsDataTable
             // 
+            this.StudentsDataTable.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            this.StudentsDataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.StudentsDataTable.BackgroundColor = System.Drawing.Color.White;
-            this.StudentsDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsDataTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.StudentsDataTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.StudentsDataTable.Location = new System.Drawing.Point(453, 65);
             this.StudentsDataTable.Name = "StudentsDataTable";
             this.StudentsDataTable.Size = new System.Drawing.Size(581, 441);
