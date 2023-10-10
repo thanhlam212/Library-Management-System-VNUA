@@ -33,5 +33,16 @@ namespace Library_Management_System_VNUA.Properties {
                 return ((string)(this["connectionDB"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-FTCGQUOI\\LAMSQL;Initial Catalog=eLibraryDB;Integrated Security" +
+            "=True")]
+        public string eLibraryDBConnectionString {
+            get {
+                return ((string)(this["eLibraryDBConnectionString"]));
+            }
+        }
     }
 }

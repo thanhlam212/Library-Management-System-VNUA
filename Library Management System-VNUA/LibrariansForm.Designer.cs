@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrariansForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.QuitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.StudentsDataTable = new System.Windows.Forms.DataGridView();
+            this.librariansTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eLibraryDBDataSet = new Library_Management_System_VNUA.eLibraryDBDataSet();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.AddStudentsBtn = new System.Windows.Forms.Button();
@@ -46,8 +52,15 @@
             this.passwordLbl = new System.Windows.Forms.Label();
             this.IdLbl = new System.Windows.Forms.Label();
             this.LibPass = new System.Windows.Forms.TextBox();
+            this.librariansTblTableAdapter = new Library_Management_System_VNUA.eLibraryDBDataSetTableAdapters.LibrariansTblTableAdapter();
+            this.libIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDataTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librariansTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibraryDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,17 +112,61 @@
             // StudentsDataTable
             // 
             this.StudentsDataTable.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
-            this.StudentsDataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            this.StudentsDataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.StudentsDataTable.AutoGenerateColumns = false;
             this.StudentsDataTable.BackgroundColor = System.Drawing.Color.White;
-            this.StudentsDataTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.StudentsDataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StudentsDataTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.StudentsDataTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentsDataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.StudentsDataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.libIDDataGridViewTextBoxColumn,
+            this.libNameDataGridViewTextBoxColumn,
+            this.libPasswordDataGridViewTextBoxColumn,
+            this.libPhoneDataGridViewTextBoxColumn});
+            this.StudentsDataTable.DataSource = this.librariansTblBindingSource;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentsDataTable.DefaultCellStyle = dataGridViewCellStyle7;
             this.StudentsDataTable.Location = new System.Drawing.Point(453, 65);
             this.StudentsDataTable.Name = "StudentsDataTable";
-            this.StudentsDataTable.Size = new System.Drawing.Size(581, 441);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentsDataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.StudentsDataTable.Size = new System.Drawing.Size(593, 441);
             this.StudentsDataTable.TabIndex = 43;
+            this.StudentsDataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsDataTable_CellContentClick);
+            // 
+            // librariansTblBindingSource
+            // 
+            this.librariansTblBindingSource.DataMember = "LibrariansTbl";
+            this.librariansTblBindingSource.DataSource = this.eLibraryDBDataSet;
+            // 
+            // eLibraryDBDataSet
+            // 
+            this.eLibraryDBDataSet.DataSetName = "eLibraryDBDataSet";
+            this.eLibraryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DeleteBtn
             // 
@@ -124,6 +181,7 @@
             this.DeleteBtn.TabIndex = 42;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -138,6 +196,7 @@
             this.UpdateBtn.TabIndex = 41;
             this.UpdateBtn.Text = "Edit";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // AddStudentsBtn
             // 
@@ -234,6 +293,38 @@
             this.LibPass.Size = new System.Drawing.Size(215, 31);
             this.LibPass.TabIndex = 36;
             // 
+            // librariansTblTableAdapter
+            // 
+            this.librariansTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // libIDDataGridViewTextBoxColumn
+            // 
+            this.libIDDataGridViewTextBoxColumn.DataPropertyName = "LibID";
+            this.libIDDataGridViewTextBoxColumn.HeaderText = "LibID";
+            this.libIDDataGridViewTextBoxColumn.Name = "libIDDataGridViewTextBoxColumn";
+            this.libIDDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // libNameDataGridViewTextBoxColumn
+            // 
+            this.libNameDataGridViewTextBoxColumn.DataPropertyName = "LibName";
+            this.libNameDataGridViewTextBoxColumn.HeaderText = "LibName";
+            this.libNameDataGridViewTextBoxColumn.Name = "libNameDataGridViewTextBoxColumn";
+            this.libNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // libPasswordDataGridViewTextBoxColumn
+            // 
+            this.libPasswordDataGridViewTextBoxColumn.DataPropertyName = "LibPassword";
+            this.libPasswordDataGridViewTextBoxColumn.HeaderText = "LibPassword";
+            this.libPasswordDataGridViewTextBoxColumn.Name = "libPasswordDataGridViewTextBoxColumn";
+            this.libPasswordDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // libPhoneDataGridViewTextBoxColumn
+            // 
+            this.libPhoneDataGridViewTextBoxColumn.DataPropertyName = "LibPhone";
+            this.libPhoneDataGridViewTextBoxColumn.HeaderText = "LibPhone";
+            this.libPhoneDataGridViewTextBoxColumn.Name = "libPhoneDataGridViewTextBoxColumn";
+            this.libPhoneDataGridViewTextBoxColumn.Width = 150;
+            // 
             // LibrariansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +351,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDataTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librariansTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eLibraryDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +376,12 @@
         private System.Windows.Forms.Label passwordLbl;
         private System.Windows.Forms.Label IdLbl;
         private System.Windows.Forms.TextBox LibPass;
+        private eLibraryDBDataSet eLibraryDBDataSet;
+        private System.Windows.Forms.BindingSource librariansTblBindingSource;
+        private eLibraryDBDataSetTableAdapters.LibrariansTblTableAdapter librariansTblTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libPasswordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libPhoneDataGridViewTextBoxColumn;
     }
 }
