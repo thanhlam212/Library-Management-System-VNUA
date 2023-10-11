@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>eLibraryDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="eLibraryDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eLibraryDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IssueBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +140,17 @@
     </None>
     <None Include="eLibraryDBDataSet.xss">
       <DependentUpon>eLibraryDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eLibraryDBDataSet1.xsc">
+      <DependentUpon>eLibraryDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="eLibraryDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eLibraryDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eLibraryDBDataSet1.xss">
+      <DependentUpon>eLibraryDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

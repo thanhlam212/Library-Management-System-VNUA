@@ -43,7 +43,7 @@ namespace Library_Management_System_VNUA
                 SqlCommandBuilder cmd = new SqlCommandBuilder(dap);
                 DataSet ds = new DataSet();
                 dap.Fill(ds);
-                StudentsDataTable.DataSource = ds.Tables[0];
+                LibrariansDataTable.DataSource = ds.Tables[0];
             }
             catch(Exception ex)
             {
@@ -138,12 +138,12 @@ namespace Library_Management_System_VNUA
 
         protected void StudentsDataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < StudentsDataTable.Rows.Count && StudentsDataTable.SelectedRows.Count > 0)
+            if (e.RowIndex >= 0 && e.RowIndex < LibrariansDataTable.Rows.Count && LibrariansDataTable.SelectedRows.Count > 0)
             {
-                LibID.Text = StudentsDataTable.SelectedRows[0].Cells[0].Value?.ToString();
-                LibName.Text = StudentsDataTable.SelectedRows[0].Cells[1].Value?.ToString();
-                LibPass.Text = StudentsDataTable.SelectedRows[0].Cells[2].Value?.ToString();
-                LibPhone.Text = StudentsDataTable.SelectedRows[0].Cells[3].Value?.ToString();
+                LibID.Text = LibrariansDataTable.SelectedRows[0].Cells[0].Value?.ToString();
+                LibName.Text = LibrariansDataTable.SelectedRows[0].Cells[1].Value?.ToString();
+                LibPass.Text = LibrariansDataTable.SelectedRows[0].Cells[2].Value?.ToString();
+                LibPhone.Text = LibrariansDataTable.SelectedRows[0].Cells[3].Value?.ToString();
             }
         }
 
