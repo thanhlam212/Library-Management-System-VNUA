@@ -16,7 +16,8 @@ namespace Library_Management_System_VNUA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LibrariansForm());
+            Application.Run(new StudentsForm());
+           
         }
     }
 }
