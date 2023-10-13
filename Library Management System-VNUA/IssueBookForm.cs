@@ -28,5 +28,10 @@ namespace Library_Management_System_VNUA
             MainForm main = new MainForm();
             main.Show();
         }
+
+        private void QuitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -79,6 +79,7 @@
             this.QuitBtn.Size = new System.Drawing.Size(47, 33);
             this.QuitBtn.TabIndex = 2;
             this.QuitBtn.UseVisualStyleBackColor = true;
+            this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // label1
             // 
