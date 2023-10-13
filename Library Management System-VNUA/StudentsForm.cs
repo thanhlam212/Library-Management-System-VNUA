@@ -40,6 +40,7 @@ namespace Library_Management_System_VNUA
             Populate();
         }
 
+      /*Add student button click*/
         protected void AddStudentsBtn_Click(object sender, EventArgs e)
         {
             try
@@ -65,6 +66,7 @@ namespace Library_Management_System_VNUA
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Added Student Successfully.");
+                    ClearField();
                     Populate();
                 }
             }
@@ -106,6 +108,7 @@ namespace Library_Management_System_VNUA
             }
         }
 
+        /*Delete Button click*/
         protected void DeleteBtn_Click(object sender, EventArgs e)
         {
             try
@@ -166,6 +169,7 @@ namespace Library_Management_System_VNUA
             }
         }
 
+        /*Update Studnt Button Click*/
         protected void UpdateBtn_Click(object sender, EventArgs e)
         {
             try
