@@ -184,49 +184,7 @@ namespace Library_Management_System_VNUA
             }
         }
 
-
-            }
-        }
-
-        private void DeleteBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (LibID.Text == "")
-                {
-                    MessageBox.Show("Enter The Library ID.");
-                }
-                else
-                {
-                    if (conn.State == ConnectionState.Closed)
-                    {
-                        conn.Open();
-                    }
-                    string query = "DeleteDataLibrariansTbl";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@LibID", LibID.Text.Trim());
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Librarian Deleted Successfully.");
-                    ClearField();
-                    Populate();
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-            }
-        }
-
-        protected void StudentsDataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        protected void LibrariansDataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < LibrariansDataTable.Rows.Count && LibrariansDataTable.SelectedRows.Count > 0)
             {
@@ -234,47 +192,6 @@ namespace Library_Management_System_VNUA
                 LibName.Text = LibrariansDataTable.SelectedRows[0].Cells[1].Value?.ToString();
                 LibPass.Text = LibrariansDataTable.SelectedRows[0].Cells[2].Value?.ToString();
                 LibPhone.Text = LibrariansDataTable.SelectedRows[0].Cells[3].Value?.ToString();
-            }
-        }
-
-        protected void UpdateBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (LibID.Text == "" || LibName.Text == "" || LibPass.Text == "" || LibPhone.Text == "")
-                {
-                    MessageBox.Show("Missing Information");
-                }
-                else
-                {
-                    if (conn.State == ConnectionState.Closed)
-                    {
-                        conn.Open();
-                    }
-                    string query = "UpdateDataLibrariansTbl";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@LibID", LibID.Text.Trim());
-                    cmd.Parameters.AddWithValue("@LibName", LibName.Text.Trim());
-                    cmd.Parameters.AddWithValue("@LibPassword", LibPass.Text.Trim());
-                    cmd.Parameters.AddWithValue("@LibPhone", LibPhone.Text.Trim());
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Update Librarians Successfully.");
-                    ClearField();
-                    Populate();
-                } 
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if(conn.State == ConnectionState.Open)
-                {
-                     conn.Close();
-                }
             }
         }
 
