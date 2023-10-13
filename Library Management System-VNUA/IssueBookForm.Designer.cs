@@ -51,6 +51,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateLbl = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BackHomeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDataTable)).BeginInit();
             this.SuspendLayout();
@@ -302,11 +303,29 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(215, 31);
             this.dateTimePicker1.TabIndex = 50;
             // 
+            // BackHomeBtn
+            // 
+            this.BackHomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.BackHomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackHomeBtn.FlatAppearance.BorderSize = 0;
+            this.BackHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackHomeBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackHomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackHomeBtn.Location = new System.Drawing.Point(913, 476);
+            this.BackHomeBtn.Name = "BackHomeBtn";
+            this.BackHomeBtn.Size = new System.Drawing.Size(133, 30);
+            this.BackHomeBtn.TabIndex = 51;
+            this.BackHomeBtn.Text = "Back Home";
+            this.BackHomeBtn.UseVisualStyleBackColor = false;
+            this.BackHomeBtn.Click += new System.EventHandler(this.BackHomeBtn_Click);
+            // 
             // IssueBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 527);
+            this.Controls.Add(this.BackHomeBtn);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.comboBox2);
@@ -363,5 +382,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label dateLbl;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button BackHomeBtn;
     }
 }

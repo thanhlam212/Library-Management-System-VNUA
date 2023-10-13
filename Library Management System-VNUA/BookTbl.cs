@@ -25,6 +25,13 @@ namespace Library_Management_System_VNUA
             Populate();
         }
 
+        private void BackHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm main = new MainForm();
+            main.Show();
+        }
+
         protected void QuitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -200,5 +207,7 @@ namespace Library_Management_System_VNUA
                 }
             }
         }
+
+        
     }
 }

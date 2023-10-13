@@ -28,5 +28,31 @@ namespace Library_Management_System_VNUA
             students.Show();
             this.Hide();
         }
+
+        private void BooksBtn_Click(object sender, EventArgs e)
+        {
+            BookTbl bookTbl = new BookTbl();
+            bookTbl.Show();
+            this.Hide();
+        }
+
+        private void IssueBooksBtn_Click(object sender, EventArgs e)
+        {
+            IssueBookForm issueBookForm = new IssueBookForm();  
+            issueBookForm.Show();
+            this.Hide();
+        }
+
+        private void ReturnBooksBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LibrariansBtn_Click(object sender, EventArgs e)
+        {
+            LibrariansForm librariansForm = new LibrariansForm();
+            librariansForm.Show();
+            this.Hide();
+        }
     }
 }

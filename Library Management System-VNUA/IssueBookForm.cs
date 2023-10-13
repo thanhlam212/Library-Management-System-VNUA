@@ -21,5 +21,12 @@ namespace Library_Management_System_VNUA
         {
 
         }
+
+        private void BackHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm main = new MainForm();
+            main.Show();
+        }
     }
 }

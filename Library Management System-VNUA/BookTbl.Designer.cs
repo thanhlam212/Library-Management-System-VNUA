@@ -47,6 +47,7 @@
             this.txtAuthorName = new System.Windows.Forms.TextBox();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.quantityLbl = new System.Windows.Forms.Label();
+            this.BackHomeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BooksDataTable)).BeginInit();
             this.SuspendLayout();
@@ -252,11 +253,29 @@
             this.quantityLbl.TabIndex = 30;
             this.quantityLbl.Text = "Quantity";
             // 
+            // BackHomeBtn
+            // 
+            this.BackHomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.BackHomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackHomeBtn.FlatAppearance.BorderSize = 0;
+            this.BackHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackHomeBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackHomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackHomeBtn.Location = new System.Drawing.Point(913, 476);
+            this.BackHomeBtn.Name = "BackHomeBtn";
+            this.BackHomeBtn.Size = new System.Drawing.Size(133, 30);
+            this.BackHomeBtn.TabIndex = 31;
+            this.BackHomeBtn.Text = "Back Home";
+            this.BackHomeBtn.UseVisualStyleBackColor = false;
+            this.BackHomeBtn.Click += new System.EventHandler(this.BackHomeBtn_Click);
+            // 
             // BookTbl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 527);
+            this.Controls.Add(this.BackHomeBtn);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.BooksDataTable);
@@ -305,5 +324,6 @@
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BackHomeBtn;
     }
 }
