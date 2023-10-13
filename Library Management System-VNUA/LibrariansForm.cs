@@ -64,7 +64,7 @@ namespace Library_Management_System_VNUA
             }
         }
 
-        private void AddStudentsBtn_Click(object sender, EventArgs e)
+        private void AddBookBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -140,17 +140,6 @@ namespace Library_Management_System_VNUA
                 {
                     conn.Close();
                 }
-            }
-        }
-
-        protected void StudentsDataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < LibrariansDataTable.Rows.Count && LibrariansDataTable.SelectedRows.Count > 0)
-            {
-                LibID.Text = LibrariansDataTable.SelectedRows[0].Cells[0].Value?.ToString();
-                LibName.Text = LibrariansDataTable.SelectedRows[0].Cells[1].Value?.ToString();
-                LibPass.Text = LibrariansDataTable.SelectedRows[0].Cells[2].Value?.ToString();
-                LibPhone.Text = LibrariansDataTable.SelectedRows[0].Cells[3].Value?.ToString();
             }
         }
 
