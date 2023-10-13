@@ -25,6 +25,7 @@ namespace Library_Management_System_VNUA
             Populate();
         }
 
+
         private void BackHomeBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -207,7 +208,5 @@ namespace Library_Management_System_VNUA
                 }
             }
         }
-
-        
     }
 }
