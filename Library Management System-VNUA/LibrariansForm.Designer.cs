@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrariansForm));
-
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.QuitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,9 +57,7 @@
             this.IdLbl = new System.Windows.Forms.Label();
             this.LibPass = new System.Windows.Forms.TextBox();
             this.librariansTblTableAdapter = new Library_Management_System_VNUA.eLibraryDBDataSetTableAdapters.LibrariansTblTableAdapter();
-
             this.BackHomeBtn = new System.Windows.Forms.Button();
-
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LibrariansDataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.librariansTblBindingSource)).BeginInit();
@@ -117,57 +113,48 @@
             // LibrariansDataTable
             // 
             this.LibrariansDataTable.AllowUserToOrderColumns = true;
-
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            this.LibrariansDataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-
-
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            this.LibrariansDataTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LibrariansDataTable.AutoGenerateColumns = false;
             this.LibrariansDataTable.BackgroundColor = System.Drawing.Color.White;
             this.LibrariansDataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LibrariansDataTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.LibrariansDataTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-
-
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LibrariansDataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-
-
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LibrariansDataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.LibrariansDataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.libIDDataGridViewTextBoxColumn,
             this.libNameDataGridViewTextBoxColumn,
             this.libPasswordDataGridViewTextBoxColumn,
             this.libPhoneDataGridViewTextBoxColumn});
             this.LibrariansDataTable.DataSource = this.librariansTblBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LibrariansDataTable.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LibrariansDataTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.LibrariansDataTable.Location = new System.Drawing.Point(453, 65);
             this.LibrariansDataTable.Name = "LibrariansDataTable";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LibrariansDataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-
-
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LibrariansDataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.LibrariansDataTable.Size = new System.Drawing.Size(593, 441);
             this.LibrariansDataTable.TabIndex = 43;
             this.LibrariansDataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LibrariansDataTable_CellContentClick);
@@ -338,7 +325,7 @@
             // librariansTblTableAdapter
             // 
             this.librariansTblTableAdapter.ClearBeforeFill = true;
-
+            // 
             // BackHomeBtn
             // 
             this.BackHomeBtn.BackColor = System.Drawing.Color.Transparent;
@@ -356,11 +343,10 @@
             this.BackHomeBtn.UseVisualStyleBackColor = false;
             this.BackHomeBtn.Click += new System.EventHandler(this.BackHomeBtn_Click);
             // 
-
-
-
+            // LibrariansForm
+            // 
+            this.ClientSize = new System.Drawing.Size(1058, 527);
             this.Controls.Add(this.BackHomeBtn);
-
             this.Controls.Add(this.LibrariansDataTable);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
@@ -416,5 +402,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn libPhoneDataGridViewTextBoxColumn;
 
         private System.Windows.Forms.Button BackHomeBtn;
-
+    }
 }
