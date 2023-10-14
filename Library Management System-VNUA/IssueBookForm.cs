@@ -287,5 +287,43 @@ namespace Library_Management_System_VNUA
 
             }
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNum.Text == "")
+                {
+                    MessageBox.Show("Enter The Issue Number.");
+                }
+                else
+                {
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    string query = "DeleteDataFromIssueBooksTbl";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IssueNum", txtNum.Text.Trim());
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Issue Successfully Canceled.");
+                    ClearField();
+                    Populate();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
 }
