@@ -398,6 +398,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentsForm";
             this.Load += new System.EventHandler(this.StudentsForm_Load);
             this.panel1.ResumeLayout(false);

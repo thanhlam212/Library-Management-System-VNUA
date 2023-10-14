@@ -33,27 +33,27 @@
             this.QuitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtStdPhone = new System.Windows.Forms.TextBox();
             this.phoneLbl = new System.Windows.Forms.Label();
-            this.StudentsDataTable = new System.Windows.Forms.DataGridView();
+            this.IssueBookDataTable = new System.Windows.Forms.DataGridView();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
-            this.AddStudentsBtn = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.AddIssueBookBtn = new System.Windows.Forms.Button();
+            this.txtStdDep = new System.Windows.Forms.TextBox();
             this.usnLbl = new System.Windows.Forms.Label();
             this.DepartmentLbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
             this.nameLbl = new System.Windows.Forms.Label();
             this.NumLbl = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtStdName = new System.Windows.Forms.TextBox();
+            this.cbStuID = new System.Windows.Forms.ComboBox();
             this.BookLbl = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbBooks = new System.Windows.Forms.ComboBox();
             this.dateLbl = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateIssue = new System.Windows.Forms.DateTimePicker();
             this.BackHomeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsDataTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IssueBookDataTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +64,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1058, 53);
+            this.panel1.Size = new System.Drawing.Size(1228, 53);
             this.panel1.TabIndex = 2;
             // 
             // QuitBtn
@@ -74,10 +74,10 @@
             this.QuitBtn.FlatAppearance.BorderSize = 0;
             this.QuitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QuitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.QuitBtn.Location = new System.Drawing.Point(999, 9);
+            this.QuitBtn.Location = new System.Drawing.Point(1179, 9);
             this.QuitBtn.Name = "QuitBtn";
             this.QuitBtn.Size = new System.Drawing.Size(47, 33);
-            this.QuitBtn.TabIndex = 2;
+            this.QuitBtn.TabIndex = 0;
             this.QuitBtn.UseVisualStyleBackColor = true;
             this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
@@ -99,18 +99,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 512);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1058, 15);
+            this.panel2.Size = new System.Drawing.Size(1228, 15);
             this.panel2.TabIndex = 22;
             // 
-            // textBox5
+            // txtStdPhone
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(168, 295);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(215, 31);
-            this.textBox5.TabIndex = 45;
+            this.txtStdPhone.BackColor = System.Drawing.Color.White;
+            this.txtStdPhone.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStdPhone.ForeColor = System.Drawing.Color.Black;
+            this.txtStdPhone.Location = new System.Drawing.Point(168, 295);
+            this.txtStdPhone.Name = "txtStdPhone";
+            this.txtStdPhone.Size = new System.Drawing.Size(215, 31);
+            this.txtStdPhone.TabIndex = 4;
             // 
             // phoneLbl
             // 
@@ -122,14 +122,15 @@
             this.phoneLbl.TabIndex = 44;
             this.phoneLbl.Text = "Phone";
             // 
-            // StudentsDataTable
+            // IssueBookDataTable
             // 
-            this.StudentsDataTable.BackgroundColor = System.Drawing.Color.White;
-            this.StudentsDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsDataTable.Location = new System.Drawing.Point(453, 65);
-            this.StudentsDataTable.Name = "StudentsDataTable";
-            this.StudentsDataTable.Size = new System.Drawing.Size(581, 363);
-            this.StudentsDataTable.TabIndex = 43;
+            this.IssueBookDataTable.BackgroundColor = System.Drawing.Color.White;
+            this.IssueBookDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IssueBookDataTable.Location = new System.Drawing.Point(453, 65);
+            this.IssueBookDataTable.Name = "IssueBookDataTable";
+            this.IssueBookDataTable.Size = new System.Drawing.Size(750, 363);
+            this.IssueBookDataTable.TabIndex = 43;
+            this.IssueBookDataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.IssueBookDataTable_CellClick);
             // 
             // DeleteBtn
             // 
@@ -141,7 +142,7 @@
             this.DeleteBtn.Location = new System.Drawing.Point(453, 457);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(173, 30);
-            this.DeleteBtn.TabIndex = 42;
+            this.DeleteBtn.TabIndex = 9;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
             // 
@@ -155,33 +156,34 @@
             this.UpdateBtn.Location = new System.Drawing.Point(247, 457);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(173, 30);
-            this.UpdateBtn.TabIndex = 41;
+            this.UpdateBtn.TabIndex = 8;
             this.UpdateBtn.Text = "Edit";
             this.UpdateBtn.UseVisualStyleBackColor = false;
             // 
-            // AddStudentsBtn
+            // AddIssueBookBtn
             // 
-            this.AddStudentsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(234)))), ((int)(((byte)(136)))));
-            this.AddStudentsBtn.FlatAppearance.BorderSize = 0;
-            this.AddStudentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddStudentsBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStudentsBtn.ForeColor = System.Drawing.Color.White;
-            this.AddStudentsBtn.Location = new System.Drawing.Point(22, 457);
-            this.AddStudentsBtn.Name = "AddStudentsBtn";
-            this.AddStudentsBtn.Size = new System.Drawing.Size(173, 30);
-            this.AddStudentsBtn.TabIndex = 40;
-            this.AddStudentsBtn.Text = "Add";
-            this.AddStudentsBtn.UseVisualStyleBackColor = false;
+            this.AddIssueBookBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(234)))), ((int)(((byte)(136)))));
+            this.AddIssueBookBtn.FlatAppearance.BorderSize = 0;
+            this.AddIssueBookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddIssueBookBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddIssueBookBtn.ForeColor = System.Drawing.Color.White;
+            this.AddIssueBookBtn.Location = new System.Drawing.Point(22, 457);
+            this.AddIssueBookBtn.Name = "AddIssueBookBtn";
+            this.AddIssueBookBtn.Size = new System.Drawing.Size(173, 30);
+            this.AddIssueBookBtn.TabIndex = 7;
+            this.AddIssueBookBtn.Text = "Issue Book";
+            this.AddIssueBookBtn.UseVisualStyleBackColor = false;
+            this.AddIssueBookBtn.Click += new System.EventHandler(this.AddIssueBookBtn_Click);
             // 
-            // textBox4
+            // txtStdDep
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(168, 241);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 31);
-            this.textBox4.TabIndex = 39;
+            this.txtStdDep.BackColor = System.Drawing.Color.White;
+            this.txtStdDep.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStdDep.ForeColor = System.Drawing.Color.Black;
+            this.txtStdDep.Location = new System.Drawing.Point(168, 241);
+            this.txtStdDep.Name = "txtStdDep";
+            this.txtStdDep.Size = new System.Drawing.Size(215, 31);
+            this.txtStdDep.TabIndex = 3;
             // 
             // usnLbl
             // 
@@ -203,15 +205,15 @@
             this.DepartmentLbl.TabIndex = 38;
             this.DepartmentLbl.Text = "Department";
             // 
-            // textBox2
+            // txtNum
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(168, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 31);
-            this.textBox2.TabIndex = 34;
+            this.txtNum.BackColor = System.Drawing.Color.White;
+            this.txtNum.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNum.ForeColor = System.Drawing.Color.Black;
+            this.txtNum.Location = new System.Drawing.Point(168, 95);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(215, 31);
+            this.txtNum.TabIndex = 0;
             // 
             // nameLbl
             // 
@@ -233,31 +235,32 @@
             this.NumLbl.TabIndex = 35;
             this.NumLbl.Text = "Num";
             // 
-            // textBox3
+            // txtStdName
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(168, 192);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 31);
-            this.textBox3.TabIndex = 36;
+            this.txtStdName.BackColor = System.Drawing.Color.White;
+            this.txtStdName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStdName.ForeColor = System.Drawing.Color.Black;
+            this.txtStdName.Location = new System.Drawing.Point(168, 192);
+            this.txtStdName.Name = "txtStdName";
+            this.txtStdName.Size = new System.Drawing.Size(215, 31);
+            this.txtStdName.TabIndex = 2;
             // 
-            // comboBox1
+            // cbStuID
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbStuID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStuID.FormattingEnabled = true;
+            this.cbStuID.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.comboBox1.Location = new System.Drawing.Point(168, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 30);
-            this.comboBox1.TabIndex = 46;
+            this.cbStuID.Location = new System.Drawing.Point(168, 144);
+            this.cbStuID.Name = "cbStuID";
+            this.cbStuID.Size = new System.Drawing.Size(215, 30);
+            this.cbStuID.TabIndex = 1;
+            this.cbStuID.SelectionChangeCommitted += new System.EventHandler(this.cbStuID_SelectionChangeCommitted);
             // 
             // BookLbl
             // 
@@ -269,21 +272,21 @@
             this.BookLbl.TabIndex = 47;
             this.BookLbl.Text = "Book";
             // 
-            // comboBox2
+            // cbBooks
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbBooks.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBooks.FormattingEnabled = true;
+            this.cbBooks.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.comboBox2.Location = new System.Drawing.Point(168, 343);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(215, 30);
-            this.comboBox2.TabIndex = 48;
+            this.cbBooks.Location = new System.Drawing.Point(168, 343);
+            this.cbBooks.Name = "cbBooks";
+            this.cbBooks.Size = new System.Drawing.Size(215, 30);
+            this.cbBooks.TabIndex = 5;
             // 
             // dateLbl
             // 
@@ -295,14 +298,14 @@
             this.dateLbl.TabIndex = 49;
             this.dateLbl.Text = "Date";
             // 
-            // dateTimePicker1
+            // dtpDateIssue
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(168, 391);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(215, 31);
-            this.dateTimePicker1.TabIndex = 50;
+            this.dtpDateIssue.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateIssue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateIssue.Location = new System.Drawing.Point(168, 391);
+            this.dtpDateIssue.Name = "dtpDateIssue";
+            this.dtpDateIssue.Size = new System.Drawing.Size(215, 31);
+            this.dtpDateIssue.TabIndex = 6;
             // 
             // BackHomeBtn
             // 
@@ -313,10 +316,10 @@
             this.BackHomeBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackHomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BackHomeBtn.Location = new System.Drawing.Point(913, 476);
+            this.BackHomeBtn.Location = new System.Drawing.Point(1093, 476);
             this.BackHomeBtn.Name = "BackHomeBtn";
             this.BackHomeBtn.Size = new System.Drawing.Size(133, 30);
-            this.BackHomeBtn.TabIndex = 51;
+            this.BackHomeBtn.TabIndex = 10;
             this.BackHomeBtn.Text = "Back Home";
             this.BackHomeBtn.UseVisualStyleBackColor = false;
             this.BackHomeBtn.Click += new System.EventHandler(this.BackHomeBtn_Click);
@@ -325,35 +328,36 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 527);
+            this.ClientSize = new System.Drawing.Size(1228, 527);
             this.Controls.Add(this.BackHomeBtn);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDateIssue);
             this.Controls.Add(this.dateLbl);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbBooks);
             this.Controls.Add(this.BookLbl);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.cbStuID);
+            this.Controls.Add(this.txtStdPhone);
             this.Controls.Add(this.phoneLbl);
-            this.Controls.Add(this.StudentsDataTable);
+            this.Controls.Add(this.IssueBookDataTable);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.UpdateBtn);
-            this.Controls.Add(this.AddStudentsBtn);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.AddIssueBookBtn);
+            this.Controls.Add(this.txtStdDep);
             this.Controls.Add(this.usnLbl);
             this.Controls.Add(this.DepartmentLbl);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNum);
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.NumLbl);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtStdName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IssueBookForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IssueBook";
             this.Load += new System.EventHandler(this.IssueBookForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsDataTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IssueBookDataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,24 +369,24 @@
         private System.Windows.Forms.Button QuitBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtStdPhone;
         private System.Windows.Forms.Label phoneLbl;
-        private System.Windows.Forms.DataGridView StudentsDataTable;
+        private System.Windows.Forms.DataGridView IssueBookDataTable;
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button UpdateBtn;
-        private System.Windows.Forms.Button AddStudentsBtn;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button AddIssueBookBtn;
+        private System.Windows.Forms.TextBox txtStdDep;
         private System.Windows.Forms.Label usnLbl;
         private System.Windows.Forms.Label DepartmentLbl;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label nameLbl;
         private System.Windows.Forms.Label NumLbl;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtStdName;
+        private System.Windows.Forms.ComboBox cbStuID;
         private System.Windows.Forms.Label BookLbl;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbBooks;
         private System.Windows.Forms.Label dateLbl;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDateIssue;
         private System.Windows.Forms.Button BackHomeBtn;
     }
 }
