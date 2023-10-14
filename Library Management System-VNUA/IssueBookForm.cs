@@ -284,6 +284,7 @@ namespace Library_Management_System_VNUA
                 txtStdDep.Text = IssueBookDataTable.SelectedRows[0].Cells[3].Value?.ToString();
                 txtStdPhone.Text = IssueBookDataTable.SelectedRows[0].Cells[4].Value?.ToString();
                 cbBooks.Text = IssueBookDataTable.SelectedRows[0].Cells[5].Value?.ToString();
+
             }
         }
     }
