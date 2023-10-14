@@ -264,8 +264,6 @@ namespace Library_Management_System_VNUA
             }
         }
 
-        
-
         protected void ClearField()
         {
             txtNum.Text = "";
@@ -281,10 +279,12 @@ namespace Library_Management_System_VNUA
             if (e.RowIndex >= 0 && e.RowIndex < IssueBookDataTable.Rows.Count && IssueBookDataTable.SelectedRows.Count > 0)
             {
                 txtNum.Text = IssueBookDataTable.SelectedRows[0].Cells[0].Value?.ToString();
-                cbStuID.Text = IssueBookDataTable.SelectedRows[0].Cells["StuID"].ToString();
-                txtStdName.Text = IssueBookDataTable.SelectedRows[0].Cells[1].Value?.ToString();
-                txtStdDep.Text = IssueBookDataTable.SelectedRows[0].Cells[2].Value?.ToString();
-                txtStdPhone.Text = IssueBookDataTable.SelectedRows[0].Cells[3].Value?.ToString();
+                cbStuID.Text = IssueBookDataTable.SelectedRows[0].Cells[1].ToString();
+                txtStdName.Text = IssueBookDataTable.SelectedRows[0].Cells[2].Value?.ToString();
+                txtStdDep.Text = IssueBookDataTable.SelectedRows[0].Cells[3].Value?.ToString();
+                txtStdPhone.Text = IssueBookDataTable.SelectedRows[0].Cells[4].Value?.ToString();
+                cbBooks.Text = IssueBookDataTable.SelectedRows[0].Cells[5].Value?.ToString();
+
             }
         }
     }
