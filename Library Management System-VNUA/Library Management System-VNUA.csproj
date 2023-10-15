@@ -204,6 +204,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Images\book %281%29.png" />
+    <Content Include="Images\book %282%29.png" />
     <Content Include="Images\book.png" />
     <Content Include="Images\education.png" />
     <Content Include="Images\Library-Wallpaper-19-2560x1600-1.jpg" />
