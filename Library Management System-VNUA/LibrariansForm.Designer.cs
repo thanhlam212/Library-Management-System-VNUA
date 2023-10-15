@@ -363,6 +363,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LibrariansForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Librarians";
             this.Load += new System.EventHandler(this.LibrariansForm_Load);
             this.panel1.ResumeLayout(false);

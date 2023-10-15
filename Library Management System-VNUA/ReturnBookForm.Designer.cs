@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnBookForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.backHomeBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.QuitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,9 +55,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ReturnBooksDataTable = new System.Windows.Forms.DataGridView();
-            this.DeleteBtn = new System.Windows.Forms.Button();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.ReturnBookBtn = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IssueBookDataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBooksDataTable)).BeginInit();
@@ -64,6 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.QuitBtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -71,6 +75,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1166, 53);
             this.panel1.TabIndex = 3;
+            // 
+            // backHomeBtn
+            // 
+            this.backHomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.backHomeBtn.FlatAppearance.BorderSize = 0;
+            this.backHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backHomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(43)))), ((int)(((byte)(243)))));
+            this.backHomeBtn.Location = new System.Drawing.Point(107, 529);
+            this.backHomeBtn.Name = "backHomeBtn";
+            this.backHomeBtn.Size = new System.Drawing.Size(159, 28);
+            this.backHomeBtn.TabIndex = 3;
+            this.backHomeBtn.Text = "<< Back Home";
+            this.backHomeBtn.UseVisualStyleBackColor = false;
+            this.backHomeBtn.Click += new System.EventHandler(this.backHomeBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(1107, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 33);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // QuitBtn
             // 
@@ -315,20 +348,6 @@
             this.ReturnBooksDataTable.Size = new System.Drawing.Size(750, 210);
             this.ReturnBooksDataTable.TabIndex = 69;
             // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(9)))), ((int)(((byte)(104)))));
-            this.DeleteBtn.FlatAppearance.BorderSize = 0;
-            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(111, 537);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(173, 30);
-            this.DeleteBtn.TabIndex = 72;
-            this.DeleteBtn.Text = "Delete";
-            this.DeleteBtn.UseVisualStyleBackColor = false;
-            // 
             // UpdateBtn
             // 
             this.UpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(43)))), ((int)(((byte)(243)))));
@@ -340,8 +359,9 @@
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(173, 30);
             this.UpdateBtn.TabIndex = 71;
-            this.UpdateBtn.Text = "Edit";
+            this.UpdateBtn.Text = "Print";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // ReturnBookBtn
             // 
@@ -358,13 +378,28 @@
             this.ReturnBookBtn.UseVisualStyleBackColor = false;
             this.ReturnBookBtn.Click += new System.EventHandler(this.ReturnBookBtn_Click);
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // ReturnBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1166, 588);
-            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.backHomeBtn);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.ReturnBookBtn);
             this.Controls.Add(this.ReturnBooksDataTable);
@@ -391,6 +426,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReturnBookForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReturnBookForm";
             this.Load += new System.EventHandler(this.ReturnBookForm_Load);
             this.panel1.ResumeLayout(false);
@@ -428,8 +464,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView ReturnBooksDataTable;
-        private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button ReturnBookBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button backHomeBtn;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

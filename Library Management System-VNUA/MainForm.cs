@@ -45,7 +45,9 @@ namespace Library_Management_System_VNUA
 
         private void ReturnBooksBtn_Click(object sender, EventArgs e)
         {
-
+            ReturnBookForm returnBookForm = new ReturnBookForm();
+            returnBookForm.Show();
+            this.Hide();
         }
 
         private void LibrariansBtn_Click(object sender, EventArgs e)
@@ -53,6 +55,25 @@ namespace Library_Management_System_VNUA
             LibrariansForm librariansForm = new LibrariansForm();
             librariansForm.Show();
             this.Hide();
+        }
+
+        private void AboutUsBtn_Click(object sender, EventArgs e)
+        {
+            AboutUs aboutUs = new AboutUs();
+            aboutUs.Show();
+            this.Hide();
+        }
+
+        private void DashBoardBtn_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+        }
+
+        private void TipeBtn_Click(object sender, EventArgs e)
+        {
+            TipsForm tipsForm = new TipsForm();
+            tipsForm.Show();    
         }
     }
 }
