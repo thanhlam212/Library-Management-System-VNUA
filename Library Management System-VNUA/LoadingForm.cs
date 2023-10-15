@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Library_Management_System_VNUA
 {
-    public partial class Form1 : Form
+    public partial class LoadingForm : Form
     {
-        public Form1()
+        public LoadingForm()
         {
             InitializeComponent();
         }

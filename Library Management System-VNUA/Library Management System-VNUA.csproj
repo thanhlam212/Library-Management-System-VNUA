@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookTbl.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookTbl.Designer.cs">
       <DependentUpon>BookTbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="eLibraryDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -106,8 +118,20 @@
     <Compile Include="StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipsForm.Designer.cs">
+      <DependentUpon>TipsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookTbl.resx">
       <DependentUpon>BookTbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueBookForm.resx">
       <DependentUpon>IssueBookForm.cs</DependentUpon>
@@ -138,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipsForm.resx">
+      <DependentUpon>TipsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="eLibraryDBDataSet.xsc">
       <DependentUpon>eLibraryDBDataSet.xsd</DependentUpon>
@@ -176,8 +203,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Images\book %281%29.png" />
+    <Content Include="Images\book.png" />
+    <Content Include="Images\education.png" />
     <Content Include="Images\Library-Wallpaper-19-2560x1600-1.jpg" />
+    <Content Include="Images\occupation.png" />
     <Content Include="Images\photo-1521587760476-6c12a4b040da.jpg" />
+    <Content Include="Images\return.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

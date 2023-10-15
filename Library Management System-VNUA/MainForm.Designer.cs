@@ -62,7 +62,7 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1058, 45);
+            this.panel1.Size = new System.Drawing.Size(1250, 45);
             this.panel1.TabIndex = 0;
             // 
             // QuitBtn
@@ -73,7 +73,7 @@
             this.QuitBtn.FlatAppearance.BorderSize = 0;
             this.QuitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QuitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(44)))), ((int)(((byte)(56)))));
-            this.QuitBtn.Location = new System.Drawing.Point(995, 4);
+            this.QuitBtn.Location = new System.Drawing.Point(1165, 4);
             this.QuitBtn.Name = "QuitBtn";
             this.QuitBtn.Size = new System.Drawing.Size(51, 38);
             this.QuitBtn.TabIndex = 0;
@@ -96,7 +96,7 @@
             this.LibrariansBtn.FlatAppearance.BorderSize = 0;
             this.LibrariansBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LibrariansBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibrariansBtn.Location = new System.Drawing.Point(855, 9);
+            this.LibrariansBtn.Location = new System.Drawing.Point(1017, 6);
             this.LibrariansBtn.Name = "LibrariansBtn";
             this.LibrariansBtn.Size = new System.Drawing.Size(122, 33);
             this.LibrariansBtn.TabIndex = 5;
@@ -110,7 +110,7 @@
             this.ReturnBooksBtn.FlatAppearance.BorderSize = 0;
             this.ReturnBooksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReturnBooksBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnBooksBtn.Location = new System.Drawing.Point(727, 9);
+            this.ReturnBooksBtn.Location = new System.Drawing.Point(889, 5);
             this.ReturnBooksBtn.Name = "ReturnBooksBtn";
             this.ReturnBooksBtn.Size = new System.Drawing.Size(122, 33);
             this.ReturnBooksBtn.TabIndex = 4;
@@ -124,7 +124,7 @@
             this.IssueBooksBtn.FlatAppearance.BorderSize = 0;
             this.IssueBooksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IssueBooksBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IssueBooksBtn.Location = new System.Drawing.Point(601, 9);
+            this.IssueBooksBtn.Location = new System.Drawing.Point(763, 6);
             this.IssueBooksBtn.Name = "IssueBooksBtn";
             this.IssueBooksBtn.Size = new System.Drawing.Size(120, 33);
             this.IssueBooksBtn.TabIndex = 3;
@@ -138,7 +138,7 @@
             this.BooksBtn.FlatAppearance.BorderSize = 0;
             this.BooksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BooksBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BooksBtn.Location = new System.Drawing.Point(495, 9);
+            this.BooksBtn.Location = new System.Drawing.Point(657, 6);
             this.BooksBtn.Name = "BooksBtn";
             this.BooksBtn.Size = new System.Drawing.Size(100, 33);
             this.BooksBtn.TabIndex = 2;
@@ -152,7 +152,7 @@
             this.StudentsBtn.FlatAppearance.BorderSize = 0;
             this.StudentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StudentsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentsBtn.Location = new System.Drawing.Point(389, 9);
+            this.StudentsBtn.Location = new System.Drawing.Point(551, 6);
             this.StudentsBtn.Name = "StudentsBtn";
             this.StudentsBtn.Size = new System.Drawing.Size(100, 33);
             this.StudentsBtn.TabIndex = 1;
@@ -180,7 +180,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 572);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1058, 67);
+            this.panel2.Size = new System.Drawing.Size(1250, 67);
             this.panel2.TabIndex = 1;
             // 
             // TipeBtn
@@ -189,12 +189,13 @@
             this.TipeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TipeBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipeBtn.ForeColor = System.Drawing.Color.White;
-            this.TipeBtn.Location = new System.Drawing.Point(708, 3);
+            this.TipeBtn.Location = new System.Drawing.Point(889, 3);
             this.TipeBtn.Name = "TipeBtn";
-            this.TipeBtn.Size = new System.Drawing.Size(346, 61);
+            this.TipeBtn.Size = new System.Drawing.Size(361, 61);
             this.TipeBtn.TabIndex = 2;
             this.TipeBtn.Text = "Tipe";
             this.TipeBtn.UseVisualStyleBackColor = true;
+            this.TipeBtn.Click += new System.EventHandler(this.TipeBtn_Click);
             // 
             // AboutUsBtn
             // 
@@ -202,12 +203,13 @@
             this.AboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutUsBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AboutUsBtn.ForeColor = System.Drawing.Color.White;
-            this.AboutUsBtn.Location = new System.Drawing.Point(348, 3);
+            this.AboutUsBtn.Location = new System.Drawing.Point(373, 3);
             this.AboutUsBtn.Name = "AboutUsBtn";
-            this.AboutUsBtn.Size = new System.Drawing.Size(359, 61);
+            this.AboutUsBtn.Size = new System.Drawing.Size(476, 61);
             this.AboutUsBtn.TabIndex = 1;
             this.AboutUsBtn.Text = "About Us";
             this.AboutUsBtn.UseVisualStyleBackColor = true;
+            this.AboutUsBtn.Click += new System.EventHandler(this.AboutUsBtn_Click);
             // 
             // DashBoardBtn
             // 
@@ -221,6 +223,7 @@
             this.DashBoardBtn.TabIndex = 0;
             this.DashBoardBtn.Text = "Dashboard";
             this.DashBoardBtn.UseVisualStyleBackColor = true;
+            this.DashBoardBtn.Click += new System.EventHandler(this.DashBoardBtn_Click);
             // 
             // panel3
             // 
@@ -229,7 +232,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 45);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1058, 527);
+            this.panel3.Size = new System.Drawing.Size(1250, 527);
             this.panel3.TabIndex = 2;
             // 
             // MainForm
@@ -237,12 +240,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1058, 639);
+            this.ClientSize = new System.Drawing.Size(1250, 639);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
