@@ -116,7 +116,7 @@
             // 
             this.phoneLbl.AutoSize = true;
             this.phoneLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneLbl.Location = new System.Drawing.Point(36, 304);
+            this.phoneLbl.Location = new System.Drawing.Point(18, 304);
             this.phoneLbl.Name = "phoneLbl";
             this.phoneLbl.Size = new System.Drawing.Size(69, 22);
             this.phoneLbl.TabIndex = 44;
@@ -139,7 +139,7 @@
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(453, 457);
+            this.DeleteBtn.Location = new System.Drawing.Point(210, 457);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(173, 30);
             this.DeleteBtn.TabIndex = 9;
@@ -154,11 +154,11 @@
             this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(247, 457);
+            this.UpdateBtn.Location = new System.Drawing.Point(399, 457);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(173, 30);
             this.UpdateBtn.TabIndex = 8;
-            this.UpdateBtn.Text = "Edit";
+            this.UpdateBtn.Text = "Print";
             this.UpdateBtn.UseVisualStyleBackColor = false;
             // 
             // AddIssueBookBtn
@@ -190,7 +190,7 @@
             // 
             this.usnLbl.AutoSize = true;
             this.usnLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usnLbl.Location = new System.Drawing.Point(36, 150);
+            this.usnLbl.Location = new System.Drawing.Point(18, 150);
             this.usnLbl.Name = "usnLbl";
             this.usnLbl.Size = new System.Drawing.Size(45, 22);
             this.usnLbl.TabIndex = 33;
@@ -200,7 +200,7 @@
             // 
             this.DepartmentLbl.AutoSize = true;
             this.DepartmentLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmentLbl.Location = new System.Drawing.Point(36, 250);
+            this.DepartmentLbl.Location = new System.Drawing.Point(18, 250);
             this.DepartmentLbl.Name = "DepartmentLbl";
             this.DepartmentLbl.Size = new System.Drawing.Size(123, 22);
             this.DepartmentLbl.TabIndex = 38;
@@ -220,7 +220,7 @@
             // 
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLbl.Location = new System.Drawing.Point(36, 201);
+            this.nameLbl.Location = new System.Drawing.Point(18, 201);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(66, 22);
             this.nameLbl.TabIndex = 37;
@@ -230,11 +230,11 @@
             // 
             this.NumLbl.AutoSize = true;
             this.NumLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumLbl.Location = new System.Drawing.Point(36, 104);
+            this.NumLbl.Location = new System.Drawing.Point(18, 98);
             this.NumLbl.Name = "NumLbl";
-            this.NumLbl.Size = new System.Drawing.Size(53, 22);
+            this.NumLbl.Size = new System.Drawing.Size(132, 22);
             this.NumLbl.TabIndex = 35;
-            this.NumLbl.Text = "Num";
+            this.NumLbl.Text = "Issue Number";
             // 
             // txtStdName
             // 
@@ -267,7 +267,7 @@
             // 
             this.BookLbl.AutoSize = true;
             this.BookLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookLbl.Location = new System.Drawing.Point(36, 351);
+            this.BookLbl.Location = new System.Drawing.Point(18, 351);
             this.BookLbl.Name = "BookLbl";
             this.BookLbl.Size = new System.Drawing.Size(55, 22);
             this.BookLbl.TabIndex = 47;
@@ -293,7 +293,7 @@
             // 
             this.dateLbl.AutoSize = true;
             this.dateLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLbl.Location = new System.Drawing.Point(36, 390);
+            this.dateLbl.Location = new System.Drawing.Point(18, 397);
             this.dateLbl.Name = "dateLbl";
             this.dateLbl.Size = new System.Drawing.Size(56, 22);
             this.dateLbl.TabIndex = 49;
