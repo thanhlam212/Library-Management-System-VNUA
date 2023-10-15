@@ -150,6 +150,52 @@ namespace Library_Management_System_VNUA
             }
         }
 
+        private void UpdateQuantityBookCancellation()
+        {
+            try
+            {
+                int Qty, newQty;
+
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                string query = "UpdateBook";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@BookName", cbBooks.SelectedItem.ToString());
+                DataTable dt = new DataTable();
+                SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                dap.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    Qty = Convert.ToInt32(dr["Quantity"].ToString());
+                    newQty = Qty + 1;
+                    string updateQtyBookTbl = "UpdateQuantityFromBookTbl";
+                    SqlCommand sqlCommand = new SqlCommand(updateQtyBookTbl, conn);
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                    sqlCommand.Parameters.AddWithValue("@NewQuantity", newQty);
+                    sqlCommand.Parameters.AddWithValue("@BookName", cbBooks.SelectedValue.ToString());
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         protected void Populate()
         {
             try
@@ -279,12 +325,11 @@ namespace Library_Management_System_VNUA
             if (e.RowIndex >= 0 && e.RowIndex < IssueBookDataTable.Rows.Count && IssueBookDataTable.SelectedRows.Count > 0)
             {
                 txtNum.Text = IssueBookDataTable.SelectedRows[0].Cells[0].Value?.ToString();
-                cbStuID.Text = IssueBookDataTable.SelectedRows[0].Cells[1].ToString();
+                cbStuID.SelectedItem = IssueBookDataTable.SelectedRows[0].Cells[1].Value?.ToString();
                 txtStdName.Text = IssueBookDataTable.SelectedRows[0].Cells[2].Value?.ToString();
                 txtStdDep.Text = IssueBookDataTable.SelectedRows[0].Cells[3].Value?.ToString();
                 txtStdPhone.Text = IssueBookDataTable.SelectedRows[0].Cells[4].Value?.ToString();
                 cbBooks.Text = IssueBookDataTable.SelectedRows[0].Cells[5].Value?.ToString();
-
             }
         }
 
@@ -310,6 +355,7 @@ namespace Library_Management_System_VNUA
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Issue Successfully Canceled.");
                     ClearField();
+                    //UpdateQuantityBookCancellation();
                     Populate();
                 }
             }
