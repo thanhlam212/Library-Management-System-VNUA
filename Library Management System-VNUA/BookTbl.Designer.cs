@@ -253,7 +253,6 @@
             this.quantityLbl.TabIndex = 30;
             this.quantityLbl.Text = "Quantity";
             // 
-
             // BackHomeBtn
             // 
             this.BackHomeBtn.BackColor = System.Drawing.Color.Transparent;
@@ -276,9 +275,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1058, 527);
-
             this.Controls.Add(this.BackHomeBtn);
-
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.BooksDataTable);
@@ -297,6 +294,7 @@
             this.Controls.Add(this.txtPublisherName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BookTbl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "1";
             this.Load += new System.EventHandler(this.BookTbl_Load);
             this.panel1.ResumeLayout(false);
