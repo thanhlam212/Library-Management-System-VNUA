@@ -43,8 +43,8 @@ namespace Library_Management_System_VNUA
                 string query = "LoginQuery";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@LibName", txtUsername.Text.Trim());
-                cmd.Parameters.AddWithValue("@LibPass", txtPassword.Text.Trim());
+                cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
+                cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
                 SqlDataAdapter dap = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 dap.Fill(dt);
